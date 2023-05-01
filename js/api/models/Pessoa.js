@@ -4,6 +4,7 @@ export class Pessoa {
     _peso 
     _altura
     _imc
+    _classificacao
     static totalDePessoa = 0
     constructor (nome, idade,peso,altura){
         this._nome = nome
