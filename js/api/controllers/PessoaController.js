@@ -1,4 +1,5 @@
-import { Pessoa } from "../models/Pessoa";
+import { Pessoa } from "../models/Pessoa.js";
+import { ListaPessoa } from "../models/ListaPessoa.js";
 
 export class PessoaController {
     _inputName
@@ -7,17 +8,21 @@ export class PessoaController {
     _inputAltura
 
     constructor () {
-
+       
         this._inputName = $('#nome')
         this._inputIdade = $('#idade')
         this._inputPeso = $('#peso')
         this._inputAltura = $('#altura')
+
+        this._listaPessoa = new ListaPessoa()
+      
     }
     adiciona(event){
 
         event.preventDefault()
-        this._criarPessoa()
-        console.log(this._criarPessoa())
+        
+        this._listaPessoa.adiciona(this._criarPessoa())
+        console.log(this._listaPessoa.pessoa)
 
 
     }
@@ -28,6 +33,7 @@ export class PessoaController {
             this._inputPeso.val(),
             this._inputAltura.val()
         )
+        
 }
 
 _limpaFormulario() {

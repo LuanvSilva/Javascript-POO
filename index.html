@@ -10,31 +10,31 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="registration-form">
-    <form>
+  <div class="registration-form" >
+    <form action="" method="post" id="formulario">
       <h3>Calculadora IMC</h3>
         <div class="form-icon">
           
             <span><i class="icon icon-user"></i></span>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control item" id="nome" placeholder="Nome">
+            <input type="text" class="form-control item" id="nome" name="nome" placeholder="Nome">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control item" id="idade" placeholder="Idade">
+            <input type="text" class="form-control item" id="idade" name="idade" placeholder="Idade">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control item" id="peso" placeholder="Peso">
+            <input type="text" class="form-control item" id="peso" name="peso" placeholder="Peso">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control item" id="altura" placeholder="Altura">
+            <input type="text" class="form-control item" id="altura" name="altura" placeholder="Altura">
         </div>
         <div class="form-group">
-            <button type="button" class="btn btn-block create-account">Calcular</button>
+            <button type="submit" class="btn btn-block create-account" id="btnCalcular" name="btnCalcular" >Calcular</button>
         </div>
     </form>
     <div class="social-media">
-        <h5>Sign up with social media</h5>
+        <h5>Siga Nossas Redes Sociais</h5>
         <div class="social-icons">
             <a href="#"><i class="icon-social-facebook" title="Facebook"></i></a>
             <a href="#"><i class="icon-social-google" title="Google"></i></a>
@@ -42,9 +42,10 @@
         </div>
     </div>
 </div>
+<script type="module" src="/js/main.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script src="assets/js/script.js"></script>
+
 
 </body>
 </html>

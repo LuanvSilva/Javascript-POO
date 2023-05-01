@@ -1,11 +1,11 @@
-import { PessoaController } from "./api/controllers/PessoaController";
+import { PessoaController } from "./api/controllers/PessoaController.js";
 
 let pessoaController = new PessoaController()
 
 let formulario = document.querySelector('form')
 
 formulario.addEventListener('submit',(event) =>{
-
+    console.log('click')
 
     //adicionar Pessoa
     pessoaController.adiciona(event)
