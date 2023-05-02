@@ -1,5 +1,6 @@
 import { PessoaController } from "./api/controllers/PessoaController.js";
 
+console.log('carai')
 let pessoaController = new PessoaController()
 
 let formulario = document.querySelector('form')

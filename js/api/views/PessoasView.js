@@ -1,10 +1,11 @@
-export class PessoasView {
+import{ View } from '../views/View.js'
+export class PessoasView extends View {
 
     constructor(elemento){
 
-        this.elemento = elemento;
+        super(elemento)
     }
-    _template(model) {
+    template(model) {
 
         return `
         
@@ -41,8 +42,6 @@ export class PessoasView {
         
     `
     }
-    update(model){
-        this.elemento.innerHTML = this._template(model);
-    }
+
 
 }

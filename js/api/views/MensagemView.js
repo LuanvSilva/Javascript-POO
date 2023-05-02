@@ -1,10 +1,22 @@
-export class MensagemView {
+import{ View } from '../views/View.js'
+export class MensagemView extends View{
 
     constructor(elemento) {
-        this.elemento = elemento;
+        
+        super(elemento)
+        
     }
-    _template(model){
-        return model.texto ? `<p class='alert alertsu'`
+    template(model){
+        return model.texto ? `<p class='alert alert-success'>${model.texto}<\p>` : '<p><\p>'
+    }
+    update(model){
+        
+            this.elemento.innerHTML = this.template(model);
+        
+
+        setTimeout(() => this.elemento.innerHTML = '',3000)
+
+
     }
 
 
