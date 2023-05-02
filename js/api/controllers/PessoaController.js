@@ -1,5 +1,6 @@
 import { Pessoa } from "../models/Pessoa.js";
 import { ListaPessoa } from "../models/ListaPessoa.js";
+import { PessoasView } from "../views/PessoasView.js";
 
 export class PessoaController {
     _inputName
@@ -15,6 +16,9 @@ export class PessoaController {
         this._inputAltura = $('#altura')
 
         this._listaPessoa = new ListaPessoa()
+
+        this._pessoasView = new PessoasView(document.querySelector('#dados'))
+        this._pessoasView.update(this._listaPessoa)
       
     }
     adiciona(event){
@@ -23,6 +27,8 @@ export class PessoaController {
         
         this._listaPessoa.adiciona(this._criarPessoa())
         console.log(this._listaPessoa.pessoa)
+        //atualizacao de tela
+        this._pessoasView.update(this._listaPessoa)
 
 
     }
