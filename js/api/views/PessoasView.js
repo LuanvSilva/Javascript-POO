@@ -18,7 +18,7 @@ export class PessoasView extends View {
       <th scope="col">Peso</th>,
       <th scope="col">Altura</th>
       <th scope="col">Imc</th> 
-      <th scope="col">Situação</th>    //////
+      <th scope="col">Situação</th>    ////////////////////
 
     </tr>
   </thead>
